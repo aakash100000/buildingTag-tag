@@ -1,17 +1,16 @@
 pipeline {
     agent any
-	
+
     stages {
         stage('Build') {
-		
-			when{
-				buildingTag()   //stage should only execute if we are building from a tag
-			}
-		
-            steps {                
+
+                        when{
+                                tag “2.0”
+                        }
+
+            steps {
                 echo 'Hello World building tag'
             }
         }
     }
 }
-

@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
 		
 			when{
-				buildingTag()//stage should only execute if we are building from a tag
+				buildingTag()   //stage should only execute if we are building from a tag
 			}
 		
             steps {                
@@ -13,4 +13,5 @@ pipeline {
             }
         }
     }
+}
 
